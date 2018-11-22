@@ -1,0 +1,30 @@
+Input Format:
+First line of input conatins number of testcases T. For each testcase, there will be one line of input containing a and b separated by a space.
+
+Output Format:
+For each testcase, print the required output.
+
+User Task: 
+Your task is to complete the provided function.
+
+Constraints:
+1 <= T <= 10
+1 <= a, b,<= 100
+
+Input:
+1
+5.43 2.653
+
+Output:
+2.04674 2.047
+////////////////////////////////
+void precise(float a, float b)
+{
+    //perform a/b
+    float d = a/b;
+    
+    
+    cout<<d/*output the result of a/b here*/<<" "<<setprecision(3)/*use setprecision(3) here*/<<fixed/*use fixed here*/<<d/*Output c here*/<<endl;
+    
+    cout<<endl;
+}
