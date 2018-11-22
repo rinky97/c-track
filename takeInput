@@ -1,0 +1,27 @@
+Constraints:
+1 <= T <= 10
+1 <= a <= 106
+
+Input:
+2
+5
+Hello
+7
+Geeks
+
+Output:
+5 Hello
+7 Geeks
+
+***********************************************
+
+
+void inputData()
+{
+       int a;
+       string b;
+      //Use cin to take input and cout a and b with a space between them. Also use an endl after output
+      cin>>a>>b;
+    
+    cout<<a<<" "<<b<<endl;
+}
