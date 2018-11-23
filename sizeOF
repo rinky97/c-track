@@ -1,0 +1,39 @@
+Input Format:
+First line of input conatins number of testcases T. For each testcase, there will be two lines of input. First line contains a, b, c, and l. Next line contains the string (single word).
+
+Output Format:
+For each testcase, print the required output as directed in steps.
+
+User Task: 
+Your task is to complete the provided function .
+
+Constraints:
+1 <= T <= 10
+1 <= a, b, c <= 106
+1 <= l <= 1018
+
+Input:
+1
+1 2 3 5
+gfgc
+
+Output:
+4 8 4 8
+32 1
+
+///////////////////////////////////////////////////////
+
+void dataTypes(int a, float b, double c, long long l, string d){
+    
+    float p = b/c;
+    
+    double q = b/a;
+    
+    int r = c/a;
+    
+    long long m = r + l;
+    
+    cout <<sizeof(p)<<" "<<sizeof(q)<<" "<<sizeof(r)<<" "<<sizeof(m)<< endl;
+    
+    cout <<sizeof(d)<<" "<<sizeof(d[3])<< endl;
+}
