@@ -1,0 +1,43 @@
+Input Format:
+First line of input conatins number of testcases T. For each testcase, there will be one line of input containing a number n.
+
+Output Format:
+For each testcase, print "Yes" if n is prime, else print "No".
+
+User Task: 
+Your task is to complete the provided function.
+
+Constraints:
+1 <= T <= 10
+1 <= a <= 1000
+
+Input:
+2
+1
+2
+
+Output:
+No
+Yes
+///////////////////////////////////////
+
+void isPrime(int n)
+{
+    int count = 0;
+    if(n==1)
+    cout<<"No"<<endl;
+    else{
+    for(int i=2;i<=sqrt(n);i++)
+    {
+        if(n%i==0)
+        count++;
+        //Write your logic here
+        /*n is prime only if it is not divisible by any i. We will not reach till n and 1 is already discarded*/
+    }
+    if(count == 0)
+    cout<<"Yes";
+    else
+    cout<<"No";
+   cout<<endl;
+    }
+}
