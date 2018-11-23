@@ -1,0 +1,38 @@
+nput Format:
+First line of input contains number of testcases T. For each testcases, there will be a single line containing N.
+
+Output Format:
+For each testcase, check divisibility and print statements accordingly as given in above steps (without quotes).
+
+Your Task:
+Your task is to complete the function to check divisibility as required.
+
+Constraints:
+1 <= T <= 10
+1 <= N <= 106
+
+Example:
+Input:
+2
+3
+11
+
+Output:
+Three
+Eleven
+
+//////////////////////////////////////
+
+void isDivisibleByPrime(int n){
+    
+    if(n%11==0){
+    cout<<"Eleven"<<endl;
+    }
+    else if(n%3==0){
+        cout<<"Three"<<endl;}
+    else if(n%2==0)
+        cout<<"Two"<<endl;
+    else
+        cout<<-1<<endl;
+    }
+   
