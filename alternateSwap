@@ -1,0 +1,36 @@
+Input:
+First line of input contains number of testcase T. For each testcase, there will be two lines, first of which contains size of array N and next line contains N space seperated positive integers.
+
+Output:
+For each testcase, print the modified array.
+
+Constraints:
+1 <= T <= 100
+1 <= N <= 106
+1 <= Ai <= 106
+
+User Task:
+Your task is to complete the function swapElements(), which should swap each ith element with (i+2)th element. No need to print or return the array.
+
+Example:
+Input:
+1
+5
+1 2 3 4 5
+
+Output:
+3 4 5 2 1
+
+////////////////////////////////////
+
+void swapElements(int arr[], int sizeof_array){
+    
+    // Your code here
+    int temp;
+    for(int i=0;i<sizeof_array-2;i++){
+        temp = arr[i];
+        arr[i] = arr[i+2];
+        arr[i+2] = temp;
+    }
+    
+}
