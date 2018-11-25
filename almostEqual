@@ -1,0 +1,56 @@
+Input:
+For each testcase, first line of input contains number of testcase T. For each testcase, there will be two lines containing string S1 and S2.
+
+Output:
+For each testcase, print the count of characters needed to delete to make S1 and S2 equal.
+
+Constraints:
+1 <= T <= 100
+1 <= S1, S2 <= 104
+
+Example:
+Input:
+1
+madame
+madam
+
+Output:
+1
+
+Explanation:
+Testcase 1: String S1 = madame, string S2 = madam. character 'e' in first string needs to be deleted to make S1 equal to S2.
+
+//////////////////////////////////////////////////////////////////////////
+
+int countChars(string s1, string s2){
+    
+    
+    std::string larger, shorter;
+    short letters[128] = {0};   // count the occurrences of each letter 
+                                // between the larger string and the shorter string.
+    
+    if (s1.length() > s2.length()) {
+        larger = s1;
+        shorter = s2;
+    } else {
+        larger = s2;
+        shorter = s1;
+    }
+    
+    /* Sum the occurrences of each letter in the shorter string
+    and subtract in the larger string */
+    for (char& ch : shorter)
+        ++letters[ch];
+    for (char& ch : larger)
+        --letters[ch];
+    
+    /* Count the unbalanced occurrences */
+    auto cnt_edited = 0;
+    for (auto i = 0; i < 128; ++i) {
+        if (letters[i] != 0)
+            cnt_edited += abs(letters[i]);
+    }
+    
+    return cnt_edited;
+    
+}
