@@ -1,0 +1,51 @@
+Given an array A (may contain duplicates) of N elements and a positive integer K. The task is to count the number of elements which occurs exactly floor(N/K) times in the array.
+Hint: You may use hashing or brute-force.
+
+Input:
+First line of input contains number of testcases. For each testcase, there will be two lines, first of which contains N and K and second line contains array elements.
+
+Output:
+For each testcase, print the count of elements in the array which occurs exactly floor(N/K) times.
+
+Constrains:
+1 <= T <= 100
+1 <= N <= 103
+1 <= Ai <= 103
+1 <= K <= 103
+ 
+
+User Task:
+Your task is to complete the function countSpecials() which should count the elements which occurs exactly floor(N/K) times.
+
+Example:
+Input:
+1
+5 2
+1 4 1 2 4
+
+Output:
+2
+///////////////////////////////////////////////
+
+int countSpecials(int arr[], int sizeof_array, int K){
+    
+    int f = floor(sizeof_array/K);
+    int count=0;
+    int c;
+    int co[10] = {0};
+   
+    // Your code here
+    
+    for(int i=0; i<sizeof_array; i++){
+        c = arr[i];
+        co[c]++;
+    }
+    for(int j=0; j<10; j++){
+    if(co[j] == f){
+    count+=1;
+    }
+    }
+    
+return count;
+    
+}
